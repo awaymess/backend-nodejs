@@ -6,6 +6,17 @@ let posterSchema = new Schema(
     name: {
       type: String,
     },
+    location: {
+      type: String,
+    },
+    date: {
+      type: String,
+    },
+    picture: [
+      {
+        name: String,
+      },
+    ],
     like: [
       {
         name: String,
@@ -17,13 +28,13 @@ let posterSchema = new Schema(
       {
         name: String,
         comment: String,
+        date: String,
       },
     ],
   },
   {
     collection: "poster",
-  },
- 
+  }
 );
 
 module.exports = mongoose.model("poster", posterSchema);
